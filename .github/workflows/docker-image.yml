@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main", "4-add-ci-to-publish-to-container-registry" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
