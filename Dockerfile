@@ -1,5 +1,5 @@
 # Build stage
-FROM alpine:3.20 AS build
+FROM alpine:20240606 AS build
 
 # Install necessary packages
 RUN apk add --no-cache build-base cmake
@@ -18,7 +18,7 @@ RUN cmake -S . -B build && \
     cmake --install build
 
 # Release stage
-FROM alpine:3.20
+FROM alpine:20240606 AS release
 
 # Copy the build artifacts from the build stage
 COPY --from=build /usr/local /usr/local
