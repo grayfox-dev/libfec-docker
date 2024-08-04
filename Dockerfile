@@ -23,6 +23,4 @@ FROM alpine:3.20
 # Copy the build artifacts from the build stage
 COPY --from=build /usr/local /usr/local
 
-# Set the entrypoint
-ENTRYPOINT ["/bin/sh"]
 
